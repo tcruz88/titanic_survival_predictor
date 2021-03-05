@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Titanic Predictor</title>
+  </head>
+  <body>
+    <h1>It's working</h1>
+    <!-- <a href="{% url 'result' %}">Click to go to results</a> -->
+    <br>
+    <h1>Get your Titanic Prediction here</h1>
+    <p>Enter details of a fictional passenger</p>
+    <p>We will output a prediction</p>
+
+    <form action="{% url 'result' %}">
+      {%csrf_token%}
+      <p>pclass</p>
+      <input type="text" name="pclass">
+      <p>sex</p>
+      <input type="text" name="sex">
+      <p>age</p>
+      <input type="text" name="age">
+      <p>sibsp</p>
+      <input type="text" name="sibsp">
+      <p>parent/child</p>
+      <input type="text" name="parch">
+      <p>fare</p>
+      <input type="text" name="fare">
+      <p>embarked</p>
+      <input type="text" name="embarked">
+      <p>title</p>
+      <input type="text" name="title">
+      <input type="submit">
+    </form>
+  </body>
+</html>
