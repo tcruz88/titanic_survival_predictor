@@ -3,8 +3,15 @@ body {
 }
 
 h1 {
-    font-size: large;
+    font-size: x-large;
     font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
     color: crimson;
+}
+
+p {
+    font-size: medium;
+    font-style: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: purple;
 }

@@ -25,7 +25,7 @@ SECRET_KEY = 'fc2vptq1p_$t0nv==p(rcq6jz-)+sl)1&i=z8mz^x#-g#rgw@g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.133.138.159','tomcruzportfolio.com','www.tomcruzportfolio.com']
+ALLOWED_HOSTS = ['127.0.0.1','3.133.138.159','tomcruzportfolio.com','www.tomcruzportfolio.com']
 
 
 # Application definition
