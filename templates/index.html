@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Titanic Predictor</title>
-  </head>
-  <body>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
     <h1>This is an update to check if Github changes are working</h1>
+    <button type="button" onclick="clicked()">Button</button>
     <!-- <a href="{% url 'result' %}">Click to go to results</a> -->
     <br>
     <h1>Get your Titanic Prediction here</h1>
@@ -13,24 +18,26 @@
     <p>We will output a prediction</p>
 
     <form action="{% url 'result' %}">
-      {%csrf_token%}
-      <p>pclass</p>
-      <input type="text" name="pclass">
-      <p>sex</p>
-      <input type="text" name="sex">
-      <p>age</p>
-      <input type="text" name="age">
-      <p>sibsp</p>
-      <input type="text" name="sibsp">
-      <p>parent/child</p>
-      <input type="text" name="parch">
-      <p>fare</p>
-      <input type="text" name="fare">
-      <p>embarked</p>
-      <input type="text" name="embarked">
-      <p>title</p>
-      <input type="text" name="title">
-      <input type="submit">
+        {%csrf_token%}
+        <p>pclass</p>
+        <input type="text" name="pclass">
+        <p>sex</p>
+        <input type="text" name="sex">
+        <p>age</p>
+        <input type="text" name="age">
+        <p>sibsp</p>
+        <input type="text" name="sibsp">
+        <p>parent/child</p>
+        <input type="text" name="parch">
+        <p>fare</p>
+        <input type="text" name="fare">
+        <p>embarked</p>
+        <input type="text" name="embarked">
+        <p>title</p>
+        <input type="text" name="title">
+        <input type="submit">
     </form>
-  </body>
+    <script type="text/javascript" src="{% static 'main.js' %}"></script>
+</body>
+
 </html>
