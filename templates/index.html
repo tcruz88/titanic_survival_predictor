@@ -10,17 +10,92 @@
 </head>
 
 <body>
-    <!-- <h1>Launching website locally</h1> -->
-    <!-- <button type="button" onclick="clicked()">Button</button> -->
+
+    <!--] <img src="{% static 'images/background.jpg' %}" /> -->
+
+
+
+    <!-- <h1>Launching website locally</h1>
+    <button type="button" onclick="clicked()">Button</button> -->
     <!-- <a href="{% url 'result' %}">Click to go to results</a> -->
 
-    <h1>Titanic Prediction Website: Updated via VIM using AWS ssh </h1>
-    <p>Enter details of a fictional passenger and we will output a prediction</p>
+    <!-- <h1>Titanic Prediction Website: Updated via VIM using AWS ssh </h1>
+    <p>Enter details of a fictional passenger and we will output a prediction</p> -->
 
     <form action="{% url 'result' %}">
         {%csrf_token%}
 
-        <div class="inputForm">
+        <div class="container">
+            <div class="col-md-6 mx-auto text-center">
+                <div class="header-title">
+                    <h1 class="display-2">
+                        Titanic Prediction Website
+                    </h1>
+                    <h2 class="wv-heading--subtitle">
+                        Enter details of a fictional passenger to predict survival rate:
+                    </h2>
+                </div>
+            </div>
+            <div class="mb-1 row mx-1">
+                <div class="col-md-4 mx-auto">
+                    <div class="myform form ">
+                        <div class="form-group">
+                            <select name="pclass" class="form-select my-input" aria-label="Default select example">
+                                <option selected>Ticket Class</option>
+                                <option value="1">Upper</option>
+                                <option value="2">Middle</option>
+                                <option value="3">Lower</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="embarked" class="form-select my-input" aria-label="Default select example">
+                                <option selected>Location of Embarkation</option>
+                                <option value="0">Southampton</option>
+                                <option value="1">Cherbourg</option>
+                                <option value="2">Queenstown</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="sex" class="form-select my-input" aria-label="Default select example">
+                                <option selected>Gender</option>
+                                <option value="0">Male</option>
+                                <option value="1">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="title" class="form-select my-input" aria-label="Default select example">
+                                <option selected>Title</option>
+                                <option value="0">Mr</option>
+                                <option value="1">Miss</option>
+                                <option value="2">Mrs</option>
+                                <option value="3">Master</option>
+                                <option value="4">Dr</option>
+                                <option value="5">Rev</option>
+                                <option value="6">Officer</option>
+                                <option value="7">Royalty</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="age" class="form-control my-input" placeholder="Age">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="sibsp" class="form-control my-input" placeholder="# of Siblings">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="parch" class="form-control my-input" placeholder="# of Parents/Children">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="fare" class="form-control my-input" placeholder="Price of Fare">
+                        </div>
+                        <div class="text-center ">
+                            <button type="submit" class=" btn btn-block send-button tx-tfm">Submit for Prediction</button>
+                        </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- <div class="inputForm">
 
             <div class="mb-1 row">
                 <label class="col-sm-2 col-form-label">Ticket Class</label>
@@ -129,10 +204,10 @@
             <input type="submit">
 
 
-        </div>
-        <!-- <p>pclass</p> -->
-        <!-- <input type="text" name="pclass"> -->
-        <!-- <p>sex</p>
+        </div> -->
+    <!-- <p>pclass</p> -->
+    <!-- <input type="text" name="pclass"> -->
+    <!-- <p>sex</p>
             <input type="text" name="sex">
             <p>age</p>
             <input type="text" name="age">
