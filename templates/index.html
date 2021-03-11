@@ -21,7 +21,6 @@
 
     <!-- <h1>Titanic Prediction Website: Updated via VIM using AWS ssh </h1>
     <p>Enter details of a fictional passenger and we will output a prediction</p> -->
-
     <form action="{% url 'result' %}">
         {%csrf_token%}
 
@@ -88,7 +87,7 @@
                             <input type="text" name="fare" class="form-control my-input" placeholder="Price of Fare">
                         </div>
                         <div class="text-center ">
-                            <button type="submit" class=" btn btn-block send-button tx-tfm">Submit for Prediction</button>
+                            <button type="submit" class=" btn btn-block send-button tx-tfm">Submit</button>
                         </div>
     </form>
     </div>
