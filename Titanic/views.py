@@ -3,6 +3,9 @@ from . import ml_predict
 def home(request):
     return render(request, "index.html")
 
+def titanic(request):
+    return render(request, "titanic.html")
+
 def result(request):
     pclass = request.GET["pclass"]
     sex = request.GET["sex"]
